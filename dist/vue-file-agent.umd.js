@@ -1897,6 +1897,7 @@ var AjaxRequest = /** @class */ (function () {
         return new Promise(function (resolve, reject) {
             // tslint:disable-next-line
             var request = new XMLHttpRequest();
+            request.withCredentials = true;
             var loadEvent = 'onreadystatechange';
             request.open(method, url, true);
             // Listen for ready state
