@@ -4544,6 +4544,7 @@ function () {
       var configureFn = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
       return new Promise(function (resolve, reject) {
         var request = new XMLHttpRequest();
+        request.withCredentials = true;
         var loadEvent = 'onreadystatechange';
         request.open(method, url, true); // Listen for ready state
 
