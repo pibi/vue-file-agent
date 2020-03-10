@@ -1898,6 +1898,7 @@ var AjaxRequest = /** @class */ (function () {
             // tslint:disable-next-line
             var request = new XMLHttpRequest();
             request.withCredentials = true;
+            request.timeout = 5 * 60 * 1000; // 5 minutes timeout		
             var loadEvent = 'onreadystatechange';
             request.open(method, url, true);
             // Listen for ready state
